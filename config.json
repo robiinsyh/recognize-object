@@ -1,0 +1,33 @@
+{
+  "engine": "auto",
+  "gemini": {
+    "api_key": "",
+    "model": "gemini-3.7-flash"
+  },
+  "sightengine": {
+    "api_user": "",
+    "api_secret": "",
+    "models": "nudity-2.1,violence,weapon,gore-2.0",
+    "timeout_seconds": 90
+  },
+  "thresholds": {
+    "sexuality": 0.6,
+    "violence": 0.6
+  },
+  "video": {
+    "sample_interval_seconds": 2.0,
+    "max_frames": 15,
+    "ffmpeg_path": "ffmpeg"
+  },
+  "nextcloud": {
+    "reject_exit_code": 1,
+    "clean_exit_code": 0,
+    "error_exit_code": 2,
+    "log_file": "moderation.log",
+    "action_on_reject": "delete",
+    "quarantine_dir": "",
+    "occ_path": "/var/www/html/occ",
+    "occ_php": "php",
+    "occ_timeout_seconds": 30
+  }
+}

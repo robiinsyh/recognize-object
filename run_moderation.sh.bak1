@@ -1,0 +1,6 @@
+#!/bin/bash
+/var/www/html/recz-object/venv/bin/python3 /var/www/html/recz-object/moderate.py "$1" \
+  --engine sightengine \
+  --action-on-reject delete \
+  --occ-path /var/www/html/occ \
+  --file-id "$2"
