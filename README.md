@@ -63,6 +63,13 @@ Untuk memverifikasi bahwa sistem bekerja mendeteksi foto aman, foto seksualitas 
 .venv/bin/python moderate.py /path/to/gambar.jpg
 .venv/bin/python moderate.py /path/to/gambar.jpg --engine sightengine
 .venv/bin/python moderate.py /path/to/video.mp4 --engine gemini
+
+#pengujian agar file berisi konten sensitive bisa dieksekusi dengan cara penghapusan oleh occ
+/var/www/html/recz-object/venv/bin/python3 moderate.py /path/to/konten_sensitif.jpg \
+  --engine sightengine \
+  --file-id "12345" \
+  --action-on-reject delete \
+  --occ-path /var/www/html/occ
 ```
 Output jika bersih (**Exit Code: 0**):
 ```text
